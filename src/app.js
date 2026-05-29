@@ -1,0 +1,27 @@
+const express = require("express");
+const projectRoutes = require("./routes/projectRoutes");
+
+const app = express();
+
+app.use(express.json());
+
+app.use("/projects", projectRoutes);
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "DevTrack API Running 🚀"
+  });
+});
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "healthy",
+    uptime: process.uptime()
+  });
+});
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

@@ -1,0 +1,26 @@
+{
+  "name": "devtrack",
+  "version": "1.0.0",
+  "description": "DevTrack - Deployment Monitoring Platform",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"No tests configured yet\""
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "devops",
+    "deployment-monitoring"
+  ],
+  "author": "Mohith Raju",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

@@ -5,12 +5,14 @@ const app = express();
 const projectRoutes = require("./routes/projectRoutes");
 const healthRoutes = require("./routes/healthRoutes");
 const userRoutes = require("./routes/userRoutes");
+const deploymentRoutes = require("./routes/deploymentRoutes");
 
 app.use(express.json());
 
 app.use("/projects", projectRoutes);
 app.use("/health", healthRoutes);
 app.use("/users", userRoutes);
+app.use("/deployments", deploymentRoutes);
 
 app.get("/", (req, res) => {
   res.json({

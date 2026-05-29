@@ -1,14 +1,10 @@
 const express = require("express");
-
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json([
-    {
-      id: 1,
-      name: "DevTrack"
-    }
-  ]);
-});
+const {
+  getProjects
+} = require("../controllers/projectController");
+
+router.get("/", getProjects);
 
 module.exports = router;
